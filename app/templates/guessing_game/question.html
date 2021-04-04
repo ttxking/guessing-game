@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="display:flex; flex-direction:column; align-items:center;">  
+        <div style="display: flex; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 style="margin-right: 2rem;">{{ current_game["question"]["first_letter"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["question"]["second_letter"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["question"]["third_letter"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["question"]["fourth_letter"] }}</h2>
+        </div>
+
+        <div style="display: flex; margin-top: 3rem;">
+            <form method ="POST" action="/set_question">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="A" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="B" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="C" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="D" name="submit_button">
+            </form>
+        </div>
+
+        <form method ="POST" action="/set_question">
+            <input type="submit" style="margin-top: 3rem;" class="btn btn-success" value="Finish" name="submit_button">
+        </form>
+    </div>
+{% endblock %}

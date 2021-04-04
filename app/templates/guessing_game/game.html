@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="display:flex; flex-direction:column; align-items:center;">  
+        <div style="display: flex; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 style="margin-right: 2rem;">{{ current_game["answer"]["first_answer"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["answer"]["second_answer"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["answer"]["third_answer"] }}</h2>
+            <h2 style="margin-right: 2rem;">{{ current_game["answer"]["fourth_answer"] }}</h2>
+        </div>
+
+        <h2 style="margin-top: 2rem;">{{ current_game["count"] }}</h2>
+
+        <div style="display: flex; margin-top: 3rem;">
+            <form method ="POST" action="/game">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="A" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="B" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="C" name="submit_button">
+                <input type="submit" style="width:60px;height:50px; margin-right: 2rem;" value="D" name="submit_button">
+            </form>
+        </div>
+
+        <h2 style="margin-top: 2rem;">{{ current_game["status"] }}</h2>
+        
+        <div style="display: flex; margin-top: 3rem;">
+            <form method ="POST" action="/reset">
+                <input type="submit" class="btn btn-primary" value="restart" name="submit_button" {% if current_game.restart %} {% else %} disabled {% endif %} />
+            </form>
+        </div>
+        
+
+{% endblock %}
