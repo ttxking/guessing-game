@@ -15,7 +15,7 @@ Install docker => https://docs.docker.com/desktop/
 
 Change directory to the project root. For example
 ```bash
-cd C:\Users\foo\Desktop\workspace\guessing-game
+cd ~/Desktop/ske/database/python
 ```
 
 
