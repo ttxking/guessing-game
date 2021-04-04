@@ -1,14 +1,14 @@
 # Guessing-game
-The alphabet guessing game web-application. Implement with Flask(Python) and Pymongo(MongoDB)
+A simple alphabet guessing game web application. Using with Flask and MongoDB
 
-Nuttapol Korcharoenrat 6210546404
+Anusid Wachiracharoenwong
 
 ## Installation
 
 Use the git the clone the project
 
 ```bash
-git clone https://github.com/nuttapol-kor/guessing-game.git
+git clone https://github.com/ttxking/guessing-game.git
 ```
 
 Install docker => https://docs.docker.com/desktop/
