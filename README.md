@@ -1,7 +1,7 @@
 # Guessing-game
 A simple alphabet guessing game web application. Using with Flask and MongoDB
 
-Anusid Wachiracharoenwong
+Anusid Wachiracharoenwong 6210546714
 
 ## Installation
 
